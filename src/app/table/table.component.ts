@@ -1,5 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 
+export interface IItem {
+    name: string;
+    userName: string;
+    counter: number;
+    age: number;
+}
+
 @Component({
     selector: 'app-table',
     templateUrl: './table.component.html',
@@ -8,7 +15,7 @@ import {Component, OnInit} from '@angular/core';
 
 export class TableComponent implements OnInit {
 
-    items: any;
+    items: IItem[];
     currentIndex: number;
 
     constructor(){
@@ -22,8 +29,7 @@ export class TableComponent implements OnInit {
                 name: `User ${i + 1}`,
                 userName: `Username ${i + 1}`,
                 counter: i + 1,
-                age: Math.floor(Math.random() * (100 - 18 + 1) + 18),
-                dropDown: false
+                age: Math.floor(Math.random() * (100 - 18 + 1) + 18)
             };
         });
     }
