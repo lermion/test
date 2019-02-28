@@ -9,6 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class TableComponent implements OnInit {
 
     items: any;
+    currentIndex: number;
 
     constructor(){
 

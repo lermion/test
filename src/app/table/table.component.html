@@ -8,14 +8,14 @@
     </tr>
     </thead>
     <tbody>
-    <ng-container *ngFor="let item of items">
-        <tr (click)="item.dropDown = !item.dropDown">
+    <ng-container *ngFor="let item of items; let i = index">
+        <tr (click)="currentIndex === i ? currentIndex = -1 : currentIndex = i">
             <th>{{item.counter}}</th>
             <td>{{item.name}}</td>
             <td>{{item.userName}}</td>
             <td>{{item.age}}</td>
         </tr>
-        <app-details></app-details>
+        <app-details *ngIf="currentIndex === i"></app-details>
     </ng-container>
     </tbody>
 </table>
