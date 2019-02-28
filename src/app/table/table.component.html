@@ -9,26 +9,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <th scope="row">1</th>
+    <tr *ngFor="let number of numbers">
+        <th scope="row">{{number + 1}}</th>
         <td>Vlad</td>
         <td>Zaycev</td>
         <td>lermion</td>
-        <td>25</td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Sergey</td>
-        <td>Petrov</td>
-        <td>lalala555</td>
-        <td>30</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>larry</td>
-        <td>last</td>
-        <td>35</td>
+        <td>27</td>
     </tr>
     </tbody>
 </table>
