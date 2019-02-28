@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.sass']
+    styles: [`
+      :host {
+          display: contents
+      }`]
 })
 
 export class DetailsComponent implements OnInit {
