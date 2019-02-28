@@ -2,19 +2,20 @@
     <thead>
     <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>Name</th>
         <th>Username</th>
         <th>Age</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let number of numbers">
-        <th scope="row">{{number + 1}}</th>
-        <td>Vlad</td>
-        <td>Zaycev</td>
-        <td>lermion</td>
-        <td>27</td>
-    </tr>
+    <ng-container *ngFor="let item of items">
+        <tr (click)="item.dropDown = !item.dropDown">
+            <th>{{item.counter}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.userName}}</td>
+            <td>{{item.age}}</td>
+        </tr>
+        <app-details></app-details>
+    </ng-container>
     </tbody>
 </table>

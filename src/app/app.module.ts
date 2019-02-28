@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        TableComponent
+        TableComponent,
+        DetailsComponent
     ],
     imports: [
         BrowserModule,
